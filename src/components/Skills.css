@@ -1,0 +1,117 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skills-category {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-primary);
+  padding-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-item {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.skill-primary {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.1));
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  color: var(--accent-primary);
+}
+
+.skill-primary:hover {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.3), rgba(0, 217, 255, 0.2));
+  box-shadow: 0 5px 20px rgba(0, 217, 255, 0.4);
+}
+
+.skill-secondary {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(124, 58, 237, 0.1));
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  color: var(--accent-secondary);
+}
+
+.skill-secondary:hover {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(124, 58, 237, 0.2));
+  box-shadow: 0 5px 20px rgba(124, 58, 237, 0.4);
+}
+
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cert-item {
+  padding: 1.5rem;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-tertiary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cert-item:hover {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: var(--accent-tertiary);
+  box-shadow: 0 5px 20px rgba(245, 158, 11, 0.3);
+}
+
+.cert-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cert-code,
+.cert-project,
+.cert-issuer {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+}
+
+.cert-code {
+  color: var(--accent-primary);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.cert-project {
+  color: var(--accent-secondary);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-category {
+    padding: 2rem 1.5rem;
+  }
+}
+

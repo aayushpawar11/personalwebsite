@@ -1,0 +1,110 @@
+.action-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.action-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.action-btn-primary {
+  background: transparent;
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+.action-btn-secondary {
+  background: transparent;
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+.action-btn-tertiary {
+  background: transparent;
+  border-color: var(--accent-tertiary);
+  color: var(--accent-tertiary);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+.btn-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.action-btn:hover .btn-glow {
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+}
+
+.btn-icon {
+  font-size: 1.3rem;
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+.btn-label {
+  position: relative;
+  z-index: 1;
+}
+
+.action-btn:hover {
+  transform: translateY(-5px);
+}
+
+.action-btn-primary:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+}
+
+.action-btn-secondary:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+}
+
+.action-btn-tertiary:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: var(--accent-tertiary);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+}
+
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .action-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
